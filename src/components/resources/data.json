@@ -1,0 +1,203 @@
+{
+    "Inputdata": [
+        {
+            "name": "CSV/JSON",
+            "desc": "Handles csv, json, geojson or topojson files.",
+            "input": "-",
+            "output": "Dataset, Geojson",
+            "callingnode": "File"
+        },
+        {
+            "name": "XML",
+            "desc": "Handles xml files.",
+            "input": "-",
+            "output": "Dataset, Object, String, Number, Geojson",
+            "callingnode": "File"
+        },
+        {
+            "name": "XLSX",
+            "desc": "Handles xlsx files.",
+            "input": "-",
+            "output": "Dataset, Object, Geojson",
+            "callingnode": "XLSX"
+        },
+        {
+            "name": "Sheets",
+            "desc": "Loads data from google sheets.",
+            "input": "-",
+            "output": "Dataset",
+            "callingnode": "addINode"
+        },
+        {
+            "name": "Example Data",
+            "desc": "Some example data for playing around with data blocks.",
+            "input": "-",
+            "output": "Dataset, Geojson",
+            "callingnode": "addINode"
+        }
+    ],
+    "Outputdata": [
+        {
+            "name": "File",
+            "desc": "Handles csv, json, geojson or topojson files.",
+            "input": "-",
+            "output": "Dataset, Geojson",
+            "callingnode": "File"
+        },
+        {
+            "name": "Paste",
+            "desc": "Paste input: string, number, csv, json, geojson or topojson",
+            "input": "-",
+            "output": "Dataset, Object, String, Number, Geojson",
+            "callingnode": "Paste"
+        },
+        {
+            "name": "HTTP Request",
+            "desc": "Loads data via a http request.",
+            "input": "-",
+            "output": "Dataset, Object, Geojson",
+            "callingnode": "addINode"
+        },
+        {
+            "name": "Sheets",
+            "desc": "Loads data from google sheets.",
+            "input": "-",
+            "output": "Dataset",
+            "callingnode": "addINode"
+        },
+        {
+            "name": "Example Data",
+            "desc": "Some example data for playing around with data blocks.",
+            "input": "-",
+            "output": "Dataset, Geojson",
+            "callingnode": "addINode"
+        }
+    ],
+    "Transform": [
+        {
+            "name": "Filter",
+            "desc": "Groups a data set based on a given column name.",
+            "input": "Dataset",
+            "output": "Dataset",
+            "callingnode": "addINode"
+        },
+        {
+            "name": "Merge",
+            "desc": "Merges two data sets based on the given column names.",
+            "input": "Dataset, Geojson",
+            "output": "Dataset",
+            "callingnode": "addINode"
+        },
+        {
+            "name": "Group",
+            "desc": "Groups a data set based on a given column name.",
+            "input": "Dataset, Geojson",
+            "output": "Dataset",
+            "callingnode": "addINode"
+        },
+        {
+            "name": "Slice",
+            "desc": "Slices a data set based on indices.",
+            "input": "Dataset, Array",
+            "output": "Dataset",
+            "callingnode": "slice"
+        },
+        {
+            "name": "Clean",
+            "desc": "Cleans a data set.",
+            "input": "Dataset, Array",
+            "output": "Dataset",
+            "callingnode": "clean"
+        },
+        {
+            "name": "Split",
+            "desc": "Splits a data set.",
+            "input": "Dataset, Array",
+            "output": "Dataset",
+            "callingnode": "split"
+        }
+    ],
+    "GeoData": [
+        {
+            "name": "Bounding Box",
+            "desc": "Calculates the bounding box of a given geojson.",
+            "input": "Geojson",
+            "output": "Geojson",
+            "callingnode": "addINode"
+        },
+        {
+            "name": "Centroid",
+            "desc": "Calculates the centroid of a given geojson.",
+            "input": "Geojson",
+            "output": "Geojson",
+            "callingnode": "addINode"
+        },
+        {
+            "name": "Area",
+            "desc": "Calculates the area in square meters of a given geojson.",
+            "input": "Geojson",
+            "output": "Number",
+            "callingnode": "addINode"
+        },
+        {
+            "name": "Buffer",
+            "desc": "Buffers a geojson.",
+            "input": "Geojson",
+            "output": "Geojson",
+            "callingnode": "addINode"
+        }
+    ],
+    "Vis": [
+        {
+            "name": "Barchart",
+            "desc": "Displays a bar chart of given x and y column names.",
+            "input": "Dataset",
+            "output": "Dataset",
+            "callingnode": "bar"
+        },
+        {
+            "name": "Histogram",
+            "desc": "Displays a histogram of a given column name.",
+            "input": "Dataset",
+            "output": "Dataset",
+            "callingnode": "hist"
+        },
+        {
+            "name": "Scatterplot",
+            "desc": "Displays a scatterplot of given x and y column names.",
+            "input": "Dataset",
+            "output": "Dataset",
+            "callingnode": "scatter"
+        },
+        {
+            "name": "Time Series",
+            "desc": "Displays a timeseries line chart of given x and y column names.",
+            "input": "Dataset",
+            "output": "Dataset",
+            "callingnode": "time"
+        }
+    ],
+    "Misc": [
+        {
+            "name": "Stats",
+            "desc": "Gives you min, max, avg, mean and count of a given column name.",
+            "input": "Dataset",
+            "output": "-",
+            "callingnode": "addINode"
+        },
+        {
+            "name": "Markdown",
+            "desc": "Lets you write some markdown.",
+            "input": "-",
+            "output": "-",
+            "callingnode": "addINode"
+        },
+        {
+            "name": "Export",
+            "desc": "Lets you export data as csv, json or geojson.",
+            "input": "Dataset, Geojson, Topojson, Object",
+            "output": "-",
+            "callingnode": "exports"
+        }
+    ]
+}
