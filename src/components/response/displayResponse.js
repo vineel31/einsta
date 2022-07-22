@@ -43,6 +43,7 @@ const DisplayResponse = () => {
                 </thead>
                 <tbody>
                   {values.map((value, index) => {
+                    console.log('values for csv',values)
                     return (
                       <tr key={index}>
                         {value.map((val, i) => {

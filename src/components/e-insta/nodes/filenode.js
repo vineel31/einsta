@@ -40,6 +40,7 @@ const Filenode = ({ data }) => {
   }, [name])
   
   const HandleChange = (event) => {
+    setFileType(event.target.files[0].type)
     let newDate = new Date()
     let date = newDate.getDate();
     let month = newDate.getMonth()+1;
@@ -99,7 +100,7 @@ const Filenode = ({ data }) => {
                     displayresponse(event);
                     HandleChange(event);
                     { console.log("event", event) }
-                    setFileType(event.target.files[0].type)
+                    
                   }}
                   accept=".csv, .json"
                   className='inpf1'

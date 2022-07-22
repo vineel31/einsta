@@ -74,7 +74,7 @@ const fetchslice = async () => {
           
   <TextField style={{color:'white'}} id="outlined-basic" label="Outlined" variant="outlined" value={lastrow} onChange={(event)=>{handleChange1(event)}} />
   </Typography>
-  <Button style={{color:'white'}} onClick={()=>{if(showdata===true){setShowdata(false)} else{setShowdata(true)}}} >Show Data</Button>
+  <Button variant='contained' style={{color:'white'}} onClick={()=>{if(showdata===true){setShowdata(false)} else{setShowdata(true)}}} >Show Data</Button>
   {showdata===true?(<div style={{color:'white'}}>{slice}</div>):(console.log())}
   {console.log('slice',slice)}
 

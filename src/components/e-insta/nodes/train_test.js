@@ -65,7 +65,7 @@ useEffect(()=>{
            
           
   </Typography>
-  <Button style={{color:'white'}} onClick={()=>{if(showdata===true){setShowdata(false)} else{setShowdata(true)}}} >Show Data</Button>
+  <Button variant='contained' style={{color:'white'}} onClick={()=>{if(showdata===true){setShowdata(false)} else{setShowdata(true)}}} >Show Data</Button>
   {showdata===true?(<div style={{color:'white'}}>{Train_test}</div>):(console.log())}
  
 
